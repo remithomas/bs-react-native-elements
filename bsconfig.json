@@ -1,0 +1,30 @@
+{
+    "name": "bs-react-native-elements",
+    "reason": {
+        "react-jsx": 3
+    },
+    "bs-dependencies": [
+        "reason-react",
+        "reason-react-native"
+    ],
+    "refmt": 3,
+    "bsc-flags": [
+      "-bs-no-version-header",
+      "-warn-error @a",
+      "-w @a-105"
+    ],
+    "suffix": ".bs.js",
+    "package-specs": [
+      {
+        "module": "es6",
+        "in-source": false
+      }
+    ],
+    "sources": [
+        {
+            "dir": "src",
+            "subdirs": true
+        }
+    ],
+    "namespace": "bs-react-native-elements"
+}

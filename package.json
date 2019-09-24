@@ -1,0 +1,45 @@
+{
+  "name": "bs-react-native-elements",
+  "version": "1.0.0",
+  "description": "React Native Elements bindings for ReasonML",
+  "keywords": [
+    "react-native",
+    "reactjs",
+    "reactnative",
+    "elements"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "start": "bsb -make-world",
+    "watch": "bsb -make-world -clean-world -w",
+    "clean": "bsb -clean-world",
+    "lint:staged": "lint-staged"
+  },
+  "peerDependencies": {
+    "react-native": "^0.60.0",
+    "react-native-elements": "^1.2.1",
+    "reason-react": "^0.7.0",
+    "reason-react-native": "^0.60.0"
+  },
+  "devDependencies": {
+    "bs-platform": "^5.2.0",
+    "lint-staged": "^7.3.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.11.1",
+    "reason-react": "^0.7.0",
+    "reason-react-native": "^0.60.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write --single-quote true --trailing-comma all --print-width 120 --semi false",
+      "git add"
+    ],
+    "*.re": [
+      "refmt --in-place",
+      "git add"
+    ]
+  },
+  "pre-commit": "lint:staged",
+  "author": "",
+  "license": "ISC"
+}
