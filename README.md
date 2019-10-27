@@ -18,7 +18,7 @@ Then add `bs-react-native-elements` to `bsconfig.json`
 
 ## Elements
 
-- [-] Avatar
+- [ ] Avatar (50%)
 - [ ] Badge
 - [ ] Button
 - [ ] ButtonGroup
@@ -27,7 +27,7 @@ Then add `bs-react-native-elements` to `bsconfig.json`
 - [X] Divider
 - [ ] Header
 - [X] Icon
-- [-] Image
+- [ ] Image (50%)
 - [ ] Input
 - [ ] ListItem
 - [ ] Overlay
@@ -44,3 +44,7 @@ Then add `bs-react-native-elements` to `bsconfig.json`
 
 - [ ] Add react-native props to Image
 - [ ] Text Component should accept only h1 props or h2 props... not both. multiple signatures
+
+## Contributing
+
+Please feel free to submit, comment anything on this repo :)
