@@ -24,7 +24,12 @@
         {
             "dir": "src",
             "subdirs": true
-        }
+        },
+        {
+          "dir": "examples",
+          "subdirs": true,
+          "type": "dev"
+      }
     ],
     "namespace": "bs-react-native-elements"
 }

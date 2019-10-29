@@ -5,14 +5,15 @@ open ReactNative;
 external make:
   (
     ~h1: bool=?,
-    ~h1Style: Style.t,
+    ~h1Style: Style.t=?,
     ~h2: bool=?,
-    ~h2Style: Style.t,
+    ~h2Style: Style.t=?,
     ~h3: bool=?,
-    ~h3Style: Style.t,
+    ~h3Style: Style.t=?,
     ~h4: bool=?,
-    ~h4Style: Style.t,
-    unit
+    ~h4Style: Style.t=?,
+    ~style: Style.t=?,
+    ~children: React.element=?
   ) =>
   React.element = 
   "Text";

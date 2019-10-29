@@ -1,5 +1,19 @@
 open ReactNative;
 
+type icon = {
+  name: string,
+  color: string,
+  size: int,
+  _type: string,
+  iconStyle: Style.t
+};
+
+[@bs.obj]
+external fromIcon: (
+  ~name: string,
+  unit
+) => icon = ""; 
+
 [@react.component]
 [@bs.module "react-native-elements"]
 external make:
@@ -10,7 +24,7 @@ external make:
     // editButton
     // icon
     ~iconStyle: Style.t=?,
-    // imageProps
+    ~imageProps: BsReactNativeElements.Image.imageProps=?,
     ~onEditPress: Event.pressEvent => unit=?,
     ~onLongPress: Event.pressEvent => unit=?,
     ~onPress: Event.pressEvent => unit=?,
@@ -24,7 +38,7 @@ external make:
                  | `xlarge
         ]=?,
     ~showEditButton: bool=?,
-    ~source: Style.t=?,
+    ~source: ReactNative.Image.Source.t=?,
     ~title: string=?,
     ~titleStyle: Style.t=?,
     ~renderPlaceholderContent: React.element=?,
