@@ -19,7 +19,7 @@ Then add `bs-react-native-elements` to `bsconfig.json`
 ## Elements
 
 - [ ] Avatar (50%)
-- [ ] Badge
+- [X] Badge (missing value as React.element)
 - [ ] Button
 - [ ] ButtonGroup
 - [ ] Card
@@ -44,6 +44,7 @@ Then add `bs-react-native-elements` to `bsconfig.json`
 
 - [ ] Add react-native props to Image
 - [ ] Text Component should accept only h1 props or h2 props... not both. multiple signatures
+- [ ] Badge component, value as React.element
 
 ## Contributing
 
