@@ -1,8 +1,8 @@
 # (WIP) React Native Elements bindings for ReasonML
 
-https://react-native-training.github.io/react-native-elements/
-https://reasonml-community.github.io/reason-react-native/
-https://reasonml.github.io
+- https://react-native-training.github.io/react-native-elements/
+- https://reasonml-community.github.io/reason-react-native/
+- https://reasonml.github.io
 
 ## Installation
 
@@ -10,10 +10,10 @@ https://reasonml.github.io
 yarn add https://github.com/remithomas/bs-react-native-elements
 ```
 
-Then add `bs-react-native-elements` to `bsconfig.json`
+Then add `react-native-elements` to `bsconfig.json`
 
 ```json
-"bs-dependencies": ["bs-react-native-elements"]
+"bs-dependencies": ["react-native-elements"]
 ```
 
 ## Elements

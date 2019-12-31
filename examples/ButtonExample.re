@@ -3,16 +3,16 @@ open ReactNative;
 [@react.component]
 let make = () => {
   <View>
-    <BsReactNativeElements.Button
+    <ReactNativeElements.Button
       title="Solid Button"
     />
 
-    <BsReactNativeElements.Button
+    <ReactNativeElements.Button
       title="Outline button"
       _type=`outline
     />
 
-    <BsReactNativeElements.Button
+    <ReactNativeElements.Button
       title="Clear button"
       _type=`clear
     />

@@ -4,7 +4,7 @@ open ReactNative;
 let make = () => {
   <View>
     <Avatar
-       source={
+      source={
         ReactNative.Image.Source.fromUriSource(
           ReactNative.Image.uriSource(~uri="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg", ()),
         )
@@ -30,7 +30,7 @@ let make = () => {
         )
       }
       imageProps={
-        BsReactNativeElements.Image.fromImageProps(
+        ReactNativeElements.Image.fromImageProps(
           ~source={
             ReactNative.Image.Source.fromUriSource(
               ReactNative.Image.uriSource(~uri="https://i.imgur.com/0y8Ftya.jpg", ()),

@@ -24,7 +24,7 @@ external make:
     // editButton
     // icon
     ~iconStyle: Style.t=?,
-    ~imageProps: BsReactNativeElements.Image.imageProps=?,
+    ~imageProps: ReactNativeElements.Image.imageProps=?,
     ~onEditPress: Event.pressEvent => unit=?,
     ~onLongPress: Event.pressEvent => unit=?,
     ~onPress: Event.pressEvent => unit=?,
