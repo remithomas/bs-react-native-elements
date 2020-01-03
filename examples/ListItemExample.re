@@ -1,4 +1,5 @@
 open ReactNative;
+/* open Core.StrOrNode; */
 
 [@react.component]
 let make = () => {
@@ -7,9 +8,14 @@ let make = () => {
   <View>
     {
       list |. Belt.Array.map(_item => {
+        <View>
+        /* <ListItem /> */
+        /* <ListItem title="yo" /> */
         <ListItem
-          title="title"
+          title=`String("title")
         />
+
+        </View>
       })
       |. React.array
     }
