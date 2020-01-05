@@ -7,6 +7,7 @@ type jsProps = {
   /* "containerStyle": Style.t, */
   "chevron": jsUnsafe,
   "subtitle": jsUnsafe,
+  "rightSubtitle": jsUnsafe,
 };
 
 let makeProps = (
@@ -28,7 +29,7 @@ let makeProps = (
   /* ~rightTitle, */
   /* ~rightTitleStyle: Style.t=?, */
   /* ~rightTitleProps, */
-  /* ~rightSubtitle, */
+  ~rightSubtitle: option(StrOrNode.t)=?,
   /* ~rightSubtitleStyle: Style.t=?, */
   /* ~rightSubtitleProps, */
   /* ~leftIcon, */
@@ -54,6 +55,7 @@ let makeProps = (
   /* "containerStyle": containerStyle |> Belt.Option.map(_, a => a), */
   "chevron": chevron |> BoolOrNode.encodeValue,
   "subtitle": subtitle |> StrOrNode.encodeValue,
+  "rightSubtitle": rightSubtitle |> StrOrNode.encodeValue,
 };
 
 [@bs.module "react-native-elements"]
