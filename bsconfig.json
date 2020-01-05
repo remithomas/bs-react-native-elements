@@ -31,5 +31,5 @@
         "type": "dev"
       }
     ],
-    "namespace": "elements"
+    "namespace": "react-native-elements"
 }
