@@ -21,7 +21,7 @@ external make:
     ~title: string=?,
     // titleProps
     ~titleStyle: Style.t=?,
-    ~_type: [@bs.string] [
+    ~type_: [@bs.string "type"] [
                   | `solid
                   | `clear
                   | `outline

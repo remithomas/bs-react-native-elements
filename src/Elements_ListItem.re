@@ -6,11 +6,15 @@ type jsProps = {
 };
 
 let makeProps = (
-  /* ~title: StrOrNode.t, */
-  ~title: StrOrNode.t,
+  ~_Component: option(React.element)=?,
+  ~title: option(StrOrNode.t)=?,
   ()
 ) => {
-  "title": title |> StrOrNode.encode,
+  "title": title |> StrOrNode.encodeValue,
+  // "title": switch(title |> StrOrNode.encodeOpt) {
+  //   | None => stringToJs("")
+  //   | Some(r) => r
+  // },
   /* "title": switch (title) {
     | None => "tit"
     | Some(t) => t |> StrOrNode.encode

@@ -9,16 +9,16 @@ external fromImageProps:
     ~accessible: bool=?,
     ~blurRadius: float=?,
     ~capInsets: View.edgeInsets=?,
-    ~defaultSource: ReactNative.Image.DefaultSource.t=?,
+    ~defaultSource: Image.DefaultSource.t=?,
     ~fadeDuration: float=?,
-    ~loadingIndicatorSource: array(ReactNative.Image.Source.t)=?,
-    ~onError: ReactNative.Image.errorEvent => unit=?,
+    ~loadingIndicatorSource: array(Image.Source.t)=?,
+    ~onError: Image.errorEvent => unit=?,
     ~onLayout: Event.layoutEvent => unit=?,
-    ~onLoad: ReactNative.Image.imageLoadEvent => unit=?,
+    ~onLoad: Image.imageLoadEvent => unit=?,
     ~onLoadEnd: unit => unit=?,
     ~onLoadStart: unit => unit=?,
     ~onPartialLoad: unit => unit=?,
-    ~onProgress: ReactNative.Image.progressEvent => unit=?,
+    ~onProgress: Image.progressEvent => unit=?,
     ~progressiveRenderingEnabled: bool=?,
     ~resizeMethod: [@bs.string] [ | `auto | `resize | `scale]=?,
     ~resizeMode: [@bs.string] [
@@ -29,7 +29,7 @@ external fromImageProps:
                   | `stretch
                 ]
                   =?,
-    ~source: ReactNative.Image.Source.t,
+    ~source: Image.Source.t,
     ~style: Style.t=?,
     ~testID: string=?,
     unit

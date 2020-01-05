@@ -24,7 +24,7 @@ external make:
     // editButton
     // icon
     ~iconStyle: Style.t=?,
-    ~imageProps: ReactNativeElements.Image.imageProps=?,
+    ~imageProps: Elements_Image.imageProps=?,
     ~onEditPress: Event.pressEvent => unit=?,
     ~onLongPress: Event.pressEvent => unit=?,
     ~onPress: Event.pressEvent => unit=?,
@@ -38,7 +38,7 @@ external make:
                  | `xlarge
         ]=?,
     ~showEditButton: bool=?,
-    ~source: ReactNative.Image.Source.t=?,
+    ~source: Image.Source.t=?,
     ~title: string=?,
     ~titleStyle: Style.t=?,
     ~renderPlaceholderContent: React.element=?,

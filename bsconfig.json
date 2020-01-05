@@ -21,15 +21,15 @@
       }
     ],
     "sources": [
-        {
-            "dir": "src",
-            "subdirs": true
-        },
-        {
-          "dir": "examples",
-          "subdirs": true,
-          "type": "dev"
+      {
+          "dir": "src",
+          "subdirs": true
+      },
+      {
+        "dir": "examples",
+        "subdirs": true,
+        "type": "dev"
       }
     ],
-    "namespace": "react-native-elements"
+    "namespace": "elements"
 }

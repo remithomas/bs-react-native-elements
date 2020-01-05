@@ -3,7 +3,7 @@ open ReactNative;
 [@react.component]
 let make = () => {
   <View>
-    <ReactNativeElements.Text h1=true h1Style={
+    <Elements.Text h1=true h1Style={
       Style.(
         style(
           ~paddingHorizontal=10.->dp,
@@ -13,6 +13,6 @@ let make = () => {
       )
     }>
       {ReasonReact.string("hello")}
-    </ReactNativeElements.Text>
+    </Elements.Text>
   </View>
 }

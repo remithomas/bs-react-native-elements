@@ -14,19 +14,9 @@ module StrOrNode = {
   }
 
   let encodeOpt = Belt.Option.map(_, encode);
+  let encodeValue = value => 
+    switch(value |> encodeOpt) {
+      | None => stringToJs("")
+      | Some(r) => r
+    }
 }
-
-/* module StrOrNode = {
-    type t;
-
-    type arg =
-        | Str(string)
-        | Node(ReasonReact.reactElement);
-
-    let encode: arg => t = 
-        fun
-        | Str(v) => Obj.magic(v)
-        | Node(v) => Obj.magic(v);
-a
-    let encodeOpt = Belt.Option.map(_, encode);
-}; */

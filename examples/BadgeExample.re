@@ -4,19 +4,19 @@ open ReactNative;
 let make = () => {
   <View>
     // Standard badge
-    <Badge value={Badge.BadgeValue.fromString("99+")} status=`error />
+    <Elements.Badge value={Elements.Badge.BadgeValue.fromString("99+")} status=`error />
     // Todo: allow react element
     // <Badge value={Badge.BadgeValue.fromReactElement(<Text>{"My Custom Badge"->ReasonReact.string}</Text>)} />
 
     // Mini badge
-    <Badge status=`success />
-    <Badge status=`error />
-    <Badge status=`primary />
-    <Badge status=`warning />
+    <Elements.Badge status=`success />
+    <Elements.Badge status=`error />
+    <Elements.Badge status=`primary />
+    <Elements.Badge status=`warning />
 
     // Avatar with mini badge
     <View>
-      <Avatar
+      <Elements.Avatar
         rounded=true
         source={
           ReactNative.Image.Source.fromUriSource(
@@ -26,7 +26,7 @@ let make = () => {
         size=`large
       />
 
-      <Badge
+      <Elements.Badge
         status=`success
         containerStyle={
           Style.(

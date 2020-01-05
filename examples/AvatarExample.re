@@ -3,10 +3,10 @@ open ReactNative;
 [@react.component]
 let make = () => {
   <View>
-    <Avatar
+    <Elements.Avatar
       source={
-        ReactNative.Image.Source.fromUriSource(
-          ReactNative.Image.uriSource(~uri="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg", ()),
+        Image.Source.fromUriSource(
+          Image.uriSource(~uri="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg", ()),
         )
       }
       activeOpacity={0.7}
@@ -17,23 +17,23 @@ let make = () => {
       }
       overlayContainerStyle={
         Style.(
-          style(~backgroundColor=ReactNative.Color.transparent, ())
+          style(~backgroundColor=Color.transparent, ())
         )
       }
     />
 
-    <Avatar
+    <Elements.Avatar
       rounded=true
       source={
-        ReactNative.Image.Source.fromUriSource(
-          ReactNative.Image.uriSource(~uri="https://i.imgur.com/0y8Ftya.jpg", ()),
+        Image.Source.fromUriSource(
+          Image.uriSource(~uri="https://i.imgur.com/0y8Ftya.jpg", ()),
         )
       }
       imageProps={
-        ReactNativeElements.Image.fromImageProps(
+        Elements.Image.fromImageProps(
           ~source={
-            ReactNative.Image.Source.fromUriSource(
-              ReactNative.Image.uriSource(~uri="https://i.imgur.com/0y8Ftya.jpg", ()),
+            Image.Source.fromUriSource(
+              Image.uriSource(~uri="https://i.imgur.com/0y8Ftya.jpg", ()),
             )
           },
           ~resizeMode=`contain,

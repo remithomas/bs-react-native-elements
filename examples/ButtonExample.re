@@ -3,18 +3,21 @@ open ReactNative;
 [@react.component]
 let make = () => {
   <View>
-    <ReactNativeElements.Button
+    <Elements.Button
       title="Solid Button"
+      onPress={_ => Js.log("~onPress")}
     />
 
-    <ReactNativeElements.Button
+    <Elements.Button
       title="Outline button"
-      _type=`outline
+      onPress={_ => Js.log("~onPress")}
+      type_=`outline
     />
 
-    <ReactNativeElements.Button
+    <Elements.Button
       title="Clear button"
-      _type=`clear
+      onPress={_ => Js.log("~onPress")}
+      type_=`clear
     />
   </View>
 }
