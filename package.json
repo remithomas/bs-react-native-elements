@@ -41,5 +41,8 @@
   },
   "pre-commit": "lint:staged",
   "author": "Remi THOMAS",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "refmt": "^1.13.7-1"
+  }
 }
