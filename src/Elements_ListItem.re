@@ -1,24 +1,59 @@
+/* open ReactNative; */
 open Core;
 
 type jsProps = {
   .
   "title": jsUnsafe,
+  /* "containerStyle": Style.t, */
+  "chevron": jsUnsafe,
+  "subtitle": jsUnsafe,
 };
 
 let makeProps = (
-  ~_Component: option(React.element)=?,
+  /* ~_Component: option(React.element)=?, */
   ~title: option(StrOrNode.t)=?,
+  /* ~containerStyle: option(Style.t)=?, */
+  /* ~contentContainerStyle: Style.t=?,*/
+  /* ~rightContentContainerStyle: Style.t=?, */
+  ~chevron: option(BoolOrNode.t)=?,
+  /*~checkmark,*/
+  /* ~onPress: unit => unit=?, */
+  /* ~onLongPress: unit => unit=?, */
+  /* ~title: StrOrNode.t=?, */
+  /* ~titleStyle: Style.t=?, */
+  /* ~titleProps, */
+  ~subtitle: option(StrOrNode.t)=?,
+  /* ~subtitleStyle: Style.t=?, */
+  /* ~subtitleProps, */
+  /* ~rightTitle, */
+  /* ~rightTitleStyle: Style.t=?, */
+  /* ~rightTitleProps, */
+  /* ~rightSubtitle, */
+  /* ~rightSubtitleStyle: Style.t=?, */
+  /* ~rightSubtitleProps, */
+  /* ~leftIcon, */
+  /* ~rightIcon, */
+  /* ~leftAvatar, */
+  /* ~rightAvatar, */
+  /* ~leftElement: React.element=?, */
+  /* ~rightElement: React.element=?, */
+  /* ~switch, */
+  /* ~input, */
+  /* ~buttonGroup, */
+  /* ~checkBox, */
+  /* ~badge, */
+  /* ~disabled: bool=?, */
+  /* ~disabledStyle: Style.t=?, */
+  /* ~topDivider: bool=?, */
+  /* ~bottomDivider: bool=?, */
+  /* ~_ViewComponent: React.element=?, */
+  /* ~pad: int=?, */
   ()
 ) => {
   "title": title |> StrOrNode.encodeValue,
-  // "title": switch(title |> StrOrNode.encodeOpt) {
-  //   | None => stringToJs("")
-  //   | Some(r) => r
-  // },
-  /* "title": switch (title) {
-    | None => "tit"
-    | Some(t) => t |> StrOrNode.encode
-  }, */
+  /* "containerStyle": containerStyle |> Belt.Option.map(_, a => a), */
+  "chevron": chevron |> BoolOrNode.encodeValue,
+  "subtitle": subtitle |> StrOrNode.encodeValue,
 };
 
 [@bs.module "react-native-elements"]
