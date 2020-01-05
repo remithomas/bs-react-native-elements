@@ -30,10 +30,6 @@
     "reason-react-native": "^0.60.0"
   },
   "lint-staged": {
-    "*.js": [
-      "prettier --write --single-quote true --trailing-comma all --print-width 120 --semi false",
-      "git add"
-    ],
     "*.re": [
       "refmt --in-place",
       "git add"
