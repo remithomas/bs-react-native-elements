@@ -9,6 +9,7 @@ let make = () => {
       list |. Belt.Array.map(_item => {
         <Elements.ListItem
           title=`String("title")
+          onPress={() => Js.log("onPress")}
         />
       })
       |. React.array

@@ -1,12 +1,18 @@
 /* open ReactNative; */
 open Core;
 
+external unitToJs: unit => jsUnsafe = "%identity";
+
+[@bs.deriving abstract]
 type jsProps = {
   .
   "title": jsUnsafe,
   /* "containerStyle": Style.t, */
   "chevron": jsUnsafe,
+  "checkmark": jsUnsafe,
+  "onPress": Js.nullable(unit => unit),
   "subtitle": jsUnsafe,
+  "rightTitle": jsUnsafe,
   "rightSubtitle": jsUnsafe,
 };
 
@@ -17,8 +23,8 @@ let makeProps = (
   /* ~contentContainerStyle: Style.t=?,*/
   /* ~rightContentContainerStyle: Style.t=?, */
   ~chevron: option(BoolOrNode.t)=?,
-  /*~checkmark,*/
-  /* ~onPress: unit => unit=?, */
+  ~checkmark: option(BoolOrNode.t)=?,
+  ~onPress: option(unit => unit)=?,
   /* ~onLongPress: unit => unit=?, */
   /* ~title: StrOrNode.t=?, */
   /* ~titleStyle: Style.t=?, */
@@ -26,7 +32,7 @@ let makeProps = (
   ~subtitle: option(StrOrNode.t)=?,
   /* ~subtitleStyle: Style.t=?, */
   /* ~subtitleProps, */
-  /* ~rightTitle, */
+  ~rightTitle: option(StrOrNode.t)=?,
   /* ~rightTitleStyle: Style.t=?, */
   /* ~rightTitleProps, */
   ~rightSubtitle: option(StrOrNode.t)=?,
@@ -54,7 +60,11 @@ let makeProps = (
   "title": title |> StrOrNode.encodeValue,
   /* "containerStyle": containerStyle |> Belt.Option.map(_, a => a), */
   "chevron": chevron |> BoolOrNode.encodeValue,
+  "checkmark": checkmark |> BoolOrNode.encodeValue,
+  /* "onPress": onPress |> Belt.Option.map(_, unitToJs), */
+  "onPress": Js.Nullable.fromOption(onPress),
   "subtitle": subtitle |> StrOrNode.encodeValue,
+  "rightTitle": rightTitle |> StrOrNode.encodeValue,
   "rightSubtitle": rightSubtitle |> StrOrNode.encodeValue,
 };
 
