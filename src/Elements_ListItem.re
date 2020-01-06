@@ -17,6 +17,7 @@ type jsProps = {
   "subtitleStyle": Js.nullable(Style.t),
   "rightTitle": jsUnsafe,
   "rightSubtitle": jsUnsafe,
+  "leftAvatar": jsUnsafe,
 };
 
 let makeProps = (
@@ -42,7 +43,7 @@ let makeProps = (
   /* ~rightSubtitleProps, */
   /* ~leftIcon, */
   /* ~rightIcon, */
-  /* ~leftAvatar, */
+  ~leftAvatar: option(PropsOrNode.t)=?,
   /* ~rightAvatar, */
   /* ~leftElement: React.element=?, */
   /* ~rightElement: React.element=?, */
@@ -72,6 +73,7 @@ let makeProps = (
   "subtitleStyle": Js.Nullable.fromOption(subtitleStyle),
   "rightTitle": rightTitle |> StrOrNode.encodeValue,
   "rightSubtitle": rightSubtitle |> StrOrNode.encodeValue,
+  "leftAvatar": leftAvatar |> PropsOrNode.encodeValue,
 };
 
 [@bs.module "react-native-elements"]

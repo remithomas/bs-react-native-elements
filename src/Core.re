@@ -5,6 +5,7 @@ type jsUnsafe;
 external stringToJs: string => jsUnsafe = "%identity";
 external booleanToJs: bool => jsUnsafe = "%identity";
 external nodeToJs: node => jsUnsafe = "%identity";
+external propsToJs: 'a => jsUnsafe = "%identity";
 
 module StrOrNode = {  
   type t = [ | `String(string) | `Node(node)];
@@ -33,7 +34,24 @@ module BoolOrNode = {
   let encodeOpt = Belt.Option.map(_, encode);
   let encodeValue = value => 
     switch(value |> encodeOpt) {
-      | None => stringToJs("")
+      | None => booleanToJs(false)
+      | Some(r) => r
+    }
+}
+
+module PropsOrNode = {
+  type props;
+  type t = [ | `Props(props) | `Node(node)];
+
+  let encode = value => switch (value) {
+    | `Props(p) => propsToJs(p)
+    | `Node(n) => nodeToJs(n)
+  }
+
+  let encodeOpt = Belt.Option.map(_, encode);
+  let encodeValue = value => 
+    switch(value |> encodeOpt) {
+      | None => propsToJs("")
       | Some(r) => r
     }
 }
