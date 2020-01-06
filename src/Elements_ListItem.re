@@ -18,6 +18,20 @@ type jsProps = {
   "rightTitle": jsUnsafe,
   "rightSubtitle": jsUnsafe,
   "leftAvatar": jsUnsafe,
+  /* rightAvatar, */
+  /* leftElement: React.element=?, */
+  /* rightElement: React.element=?, */
+  /* switch, */
+  /* input, */
+  /* buttonGroup, */
+  /* checkBox, */
+  /* badge, */
+  "disabled": Js.nullable(bool),
+  /* disabledStyle: Style.t=?, */
+  "topDivider": Js.nullable(bool),
+  "bottomDivider": Js.nullable(bool),
+  /* _ViewComponent: React.element=?, */
+  /* pad: int=?, */
 };
 
 let makeProps = (
@@ -52,10 +66,10 @@ let makeProps = (
   /* ~buttonGroup, */
   /* ~checkBox, */
   /* ~badge, */
-  /* ~disabled: bool=?, */
+  ~disabled: option(bool)=?,
   /* ~disabledStyle: Style.t=?, */
-  /* ~topDivider: bool=?, */
-  /* ~bottomDivider: bool=?, */
+  ~topDivider: option(bool)=?,
+  ~bottomDivider: option(bool)=?,
   /* ~_ViewComponent: React.element=?, */
   /* ~pad: int=?, */
   ()
@@ -74,6 +88,9 @@ let makeProps = (
   "rightTitle": rightTitle |> StrOrNode.encodeValue,
   "rightSubtitle": rightSubtitle |> StrOrNode.encodeValue,
   "leftAvatar": leftAvatar |> PropsOrNode.encodeValue,
+  "disabled": Js.Nullable.fromOption(disabled),
+  "topDivider": Js.Nullable.fromOption(topDivider),
+  "bottomDivider": Js.Nullable.fromOption(bottomDivider),
 };
 
 [@bs.module "react-native-elements"]
