@@ -1,4 +1,4 @@
-# (WIP) React Native Elements bindings for ReasonML
+# (WIP) React Native Elements bindings for ReasonML [![Build Status](https://travis-ci.org/remithomas/bs-react-native-elements.svg?branch=master)](https://travis-ci.org/remithomas/bs-react-native-elements)
 
 - https://react-native-training.github.io/react-native-elements/
 - https://reasonml-community.github.io/reason-react-native/

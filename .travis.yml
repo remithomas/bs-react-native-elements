@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+ - "12"
+
+script:
+ - npm run start
+
+cache:
+  directories:
+    - node_modules
+    - lib
