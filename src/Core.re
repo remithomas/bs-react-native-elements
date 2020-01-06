@@ -18,7 +18,7 @@ module StrOrNode = {
   let encodeOpt = Belt.Option.map(_, encode);
   let encodeValue = value => 
     switch(value |> encodeOpt) {
-      | None => stringToJs("")
+      | None => nodeToJs(React.null)
       | Some(r) => r
     }
 }
@@ -34,7 +34,7 @@ module BoolOrNode = {
   let encodeOpt = Belt.Option.map(_, encode);
   let encodeValue = value => 
     switch(value |> encodeOpt) {
-      | None => booleanToJs(false)
+      | None => nodeToJs(React.null)
       | Some(r) => r
     }
 }
@@ -51,7 +51,7 @@ module PropsOrNode = {
   let encodeOpt = Belt.Option.map(_, encode);
   let encodeValue = value => 
     switch(value |> encodeOpt) {
-      | None => propsToJs("")
+      | None => nodeToJs(React.null)
       | Some(r) => r
     }
 }

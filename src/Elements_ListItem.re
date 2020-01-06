@@ -27,7 +27,7 @@ type jsProps = {
   /* checkBox, */
   /* badge, */
   "disabled": Js.nullable(bool),
-  /* disabledStyle: Style.t=?, */
+  "disabledStyle": Js.nullable(Style.t),
   "topDivider": Js.nullable(bool),
   "bottomDivider": Js.nullable(bool),
   /* _ViewComponent: React.element=?, */
@@ -67,7 +67,7 @@ let makeProps = (
   /* ~checkBox, */
   /* ~badge, */
   ~disabled: option(bool)=?,
-  /* ~disabledStyle: Style.t=?, */
+  ~disabledStyle: option(Style.t)=?,
   ~topDivider: option(bool)=?,
   ~bottomDivider: option(bool)=?,
   /* ~_ViewComponent: React.element=?, */
@@ -89,143 +89,10 @@ let makeProps = (
   "rightSubtitle": rightSubtitle |> StrOrNode.encodeValue,
   "leftAvatar": leftAvatar |> PropsOrNode.encodeValue,
   "disabled": Js.Nullable.fromOption(disabled),
+  "disabledStyle": Js.Nullable.fromOption(disabledStyle),
   "topDivider": Js.Nullable.fromOption(topDivider),
   "bottomDivider": Js.Nullable.fromOption(bottomDivider),
 };
 
 [@bs.module "react-native-elements"]
 external make: React.component(jsProps) = "ListItem";
-
-
-/*
-
-
-[@bs.obj]
-external makeProps: (
-  ~_Component: React.element=?,
-  ~containerStyle: Style.t=?,
-  ~contentContainerStyle: Style.t=?,
-  ~rightContentContainerStyle: Style.t=?,
-  // ~chevron,
-  // ~checkmark,
-  ~onPress: unit => unit=?,
-  ~onLongPress: unit => unit=?,
-  ~title: StrOrNode.t=?,
-  ~titleStyle: Style.t=?,
-  // ~titleProps,
-  // ~subtitle,
-  ~subtitleStyle: Style.t=?,
-  // ~subtitleProps,
-  // ~rightTitle,
-  ~rightTitleStyle: Style.t=?,
-  // ~rightTitleProps,
-  // ~rightSubtitle,
-  ~rightSubtitleStyle: Style.t=?,
-  // ~rightSubtitleProps,
-  // ~leftIcon,
-  // ~rightIcon,
-  // ~leftAvatar,
-  // ~rightAvatar,
-  ~leftElement: React.element=?,
-  ~rightElement: React.element=?,
-  // ~switch,
-  // ~input,
-  // ~buttonGroup,
-  // ~checkBox,
-  // ~badge,
-  ~disabled: bool=?,
-  ~disabledStyle: Style.t=?,
-  ~topDivider: bool=?,
-  ~bottomDivider: bool=?,
-  ~_ViewComponent: React.element=?,
-  ~pad: int=?,
-  unit
-) => _ = "";
-
-let make =
-(
-  ~_Component=?,
-  ~containerStyle=?,
-  ~contentContainerStyle=?,
-  ~rightContentContainerStyle=?,
-  // ~chevron,
-  // ~checkmark,
-  ~onPress=?,
-  ~onLongPress=?,
-  ~title=?,
-  ~titleStyle=?,
-  // ~titleProps,
-  // ~subtitle,
-  ~subtitleStyle=?,
-  // ~subtitleProps,
-  // ~rightTitle,
-  ~rightTitleStyle=?,
-  // ~rightTitleProps,
-  // ~rightSubtitle,
-  ~rightSubtitleStyle=?,
-  // ~rightSubtitleProps,
-  // ~leftIcon,
-  // ~rightIcon,
-  // ~leftAvatar,
-  // ~rightAvatar,
-  ~leftElement=?,
-  ~rightElement=?,
-  // ~switch,
-  // ~input,
-  // ~buttonGroup,
-  // ~checkBox,
-  // ~badge,
-  ~disabled=?,
-  ~disabledStyle=?,
-  ~topDivider=?,
-  ~bottomDivider=?,
-  ~_ViewComponent=?,
-  ~pad=?,
-  children
-) => {
-  ReasonReact.wrapJsForReason(
-    ~reactClass,
-    ~props=
-      makeProps(
-        ~_Component?,
-        ~containerStyle?,
-        ~contentContainerStyle?,
-        ~rightContentContainerStyle?,
-        // ~chevron,
-        // ~checkmark,
-        ~onPress?,
-        ~onLongPress?,
-        ~title=?title |> StrOrNode.encodeOpt,
-        ~titleStyle?,
-        // ~titleProps,
-        // ~subtitle,
-        ~subtitleStyle?,
-        // ~subtitleProps,
-        // ~rightTitle,
-        ~rightTitleStyle?,
-        // ~rightTitleProps,
-        // ~rightSubtitle,
-        ~rightSubtitleStyle?,
-        // ~rightSubtitleProps,
-        // ~leftIcon,
-        // ~rightIcon,
-        // ~leftAvatar,
-        // ~rightAvatar,
-        ~leftElement?,
-        ~rightElement?,
-        // ~switch,
-        // ~input,
-        // ~buttonGroup,
-        // ~checkBox,
-        // ~badge,
-        ~disabled?,
-        ~disabledStyle?,
-        ~topDivider?,
-        ~bottomDivider?,
-        ~_ViewComponent?,
-        ~pad?,
-        ()
-      ),
-      children
-  );
-}*/
