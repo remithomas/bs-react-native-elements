@@ -1,36 +1,38 @@
-/* open ReactNative; */
+open ReactNative;
 open Core;
-
-external unitToJs: unit => jsUnsafe = "%identity";
 
 [@bs.deriving abstract]
 type jsProps = {
   .
-  "title": jsUnsafe,
-  /* "containerStyle": Style.t, */
+  "containerStyle": Js.nullable(Style.t),
+  "contentContainerStyle": Js.nullable(Style.t),
+  "rightContentContainerStyle": Js.nullable(Style.t),
   "chevron": jsUnsafe,
   "checkmark": jsUnsafe,
   "onPress": Js.nullable(unit => unit),
+  "onLongPress": Js.nullable(unit => unit),
+  "title": jsUnsafe,
+  "titleStyle": Js.nullable(Style.t),
   "subtitle": jsUnsafe,
+  "subtitleStyle": Js.nullable(Style.t),
   "rightTitle": jsUnsafe,
   "rightSubtitle": jsUnsafe,
 };
 
 let makeProps = (
   /* ~_Component: option(React.element)=?, */
-  ~title: option(StrOrNode.t)=?,
-  /* ~containerStyle: option(Style.t)=?, */
-  /* ~contentContainerStyle: Style.t=?,*/
-  /* ~rightContentContainerStyle: Style.t=?, */
+  ~containerStyle: option(Style.t)=?,
+  ~contentContainerStyle: option(Style.t)=?,
+  ~rightContentContainerStyle: option(Style.t)=?,
   ~chevron: option(BoolOrNode.t)=?,
   ~checkmark: option(BoolOrNode.t)=?,
   ~onPress: option(unit => unit)=?,
-  /* ~onLongPress: unit => unit=?, */
-  /* ~title: StrOrNode.t=?, */
-  /* ~titleStyle: Style.t=?, */
+  ~onLongPress: option(unit => unit)=?,
+  ~title: option(StrOrNode.t)=?,
+  ~titleStyle: option(Style.t)=?,
   /* ~titleProps, */
   ~subtitle: option(StrOrNode.t)=?,
-  /* ~subtitleStyle: Style.t=?, */
+  ~subtitleStyle: option(Style.t)=?,
   /* ~subtitleProps, */
   ~rightTitle: option(StrOrNode.t)=?,
   /* ~rightTitleStyle: Style.t=?, */
@@ -57,13 +59,17 @@ let makeProps = (
   /* ~pad: int=?, */
   ()
 ) => {
-  "title": title |> StrOrNode.encodeValue,
-  /* "containerStyle": containerStyle |> Belt.Option.map(_, a => a), */
+  "containerStyle": Js.Nullable.fromOption(containerStyle),
+  "contentContainerStyle": Js.Nullable.fromOption(contentContainerStyle),
+  "rightContentContainerStyle": Js.Nullable.fromOption(rightContentContainerStyle),
   "chevron": chevron |> BoolOrNode.encodeValue,
   "checkmark": checkmark |> BoolOrNode.encodeValue,
-  /* "onPress": onPress |> Belt.Option.map(_, unitToJs), */
   "onPress": Js.Nullable.fromOption(onPress),
+  "onLongPress": Js.Nullable.fromOption(onLongPress),
+  "title": title |> StrOrNode.encodeValue,
+  "titleStyle": Js.Nullable.fromOption(titleStyle),
   "subtitle": subtitle |> StrOrNode.encodeValue,
+  "subtitleStyle": Js.Nullable.fromOption(subtitleStyle),
   "rightTitle": rightTitle |> StrOrNode.encodeValue,
   "rightSubtitle": rightSubtitle |> StrOrNode.encodeValue,
 };
