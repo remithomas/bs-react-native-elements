@@ -40,8 +40,8 @@ module BoolOrNode = {
 }
 
 module PropsOrNode = {
-  type props;
-  type t = [ | `Props(props) | `Node(node)];
+  // type props;
+  type t('props) = [ | `Props('props) | `Node(node)];
 
   let encode = value => switch (value) {
     | `Props(p) => propsToJs(p)

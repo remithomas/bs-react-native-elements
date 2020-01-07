@@ -10,6 +10,9 @@ let make = () => {
         <Elements.ListItem
           title=`String("title")
           onPress={() => Js.log("onPress")}
+          leftAvatar={`Props({
+            "activeOpacity": Js.Nullable.return(2.0)
+          })}
         />
       })
       |. React.array

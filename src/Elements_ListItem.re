@@ -57,7 +57,7 @@ let makeProps = (
   /* ~rightSubtitleProps, */
   /* ~leftIcon, */
   /* ~rightIcon, */
-  ~leftAvatar: option(PropsOrNode.t)=?,
+  ~leftAvatar: option(PropsOrNode.t(Elements_Avatar.jsProps))=?,
   /* ~rightAvatar, */
   /* ~leftElement: React.element=?, */
   /* ~rightElement: React.element=?, */

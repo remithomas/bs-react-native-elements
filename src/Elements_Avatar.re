@@ -1,5 +1,11 @@
 open ReactNative;
 
+[@bs.deriving abstract]
+type jsProps = {
+  .
+  "activeOpacity": Js.nullable(float),
+}
+
 type icon = {
   name: string,
   color: string,
