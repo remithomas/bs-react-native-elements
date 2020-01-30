@@ -4,7 +4,7 @@ open ReactNative;
 let make = () => {
   <View>
     // Standard badge
-    <Elements.Badge value={Elements.Badge.BadgeValue.fromString("99+")} status=`error />
+    // <Elements.Badge value={Elements.Badge.BadgeValue.fromString("99+")} status=`error />
     // Todo: allow react element
     // <Badge value={Badge.BadgeValue.fromReactElement(<Text>{"My Custom Badge"->ReasonReact.string}</Text>)} />
 

@@ -18,9 +18,9 @@ type jsProps = {
   "rightTitle": jsUnsafe,
   "rightSubtitle": jsUnsafe,
   "leftAvatar": jsUnsafe,
-  /* rightAvatar, */
-  /* leftElement: React.element=?, */
-  /* rightElement: React.element=?, */
+  "rightAvatar": jsUnsafe,
+  "leftElement": Js.nullable(React.element),
+  "rightElement": Js.nullable(React.element),
   /* switch, */
   /* input, */
   /* buttonGroup, */
@@ -58,9 +58,9 @@ let makeProps = (
   /* ~leftIcon, */
   /* ~rightIcon, */
   ~leftAvatar: option(PropsOrNode.t(Elements_Avatar.jsProps))=?,
-  /* ~rightAvatar, */
-  /* ~leftElement: React.element=?, */
-  /* ~rightElement: React.element=?, */
+  ~rightAvatar: option(PropsOrNode.t(Elements_Avatar.jsProps))=?,
+  ~leftElement: option(React.element)=?,
+  ~rightElement: option(React.element)=?,
   /* ~switch, */
   /* ~input, */
   /* ~buttonGroup, */
@@ -88,6 +88,9 @@ let makeProps = (
   "rightTitle": rightTitle |> StrOrNode.encodeValue,
   "rightSubtitle": rightSubtitle |> StrOrNode.encodeValue,
   "leftAvatar": leftAvatar |> PropsOrNode.encodeValue,
+  "rightAvatar": rightAvatar |> PropsOrNode.encodeValue,
+  "leftElement": Js.Nullable.fromOption(leftElement),
+  "rightElement": Js.Nullable.fromOption(rightElement),
   "disabled": Js.Nullable.fromOption(disabled),
   "disabledStyle": Js.Nullable.fromOption(disabledStyle),
   "topDivider": Js.Nullable.fromOption(topDivider),
