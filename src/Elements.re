@@ -5,4 +5,5 @@ module Divider = Elements_Divider;
 module Icon = Elements_Icon;
 module Image = Elements_Image;
 module ListItem = Elements_ListItem;
+module Overlay = Elements_Overlay;
 module Text = Elements_Text;
