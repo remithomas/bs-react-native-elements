@@ -6,4 +6,5 @@ module Icon = Elements_Icon;
 module Image = Elements_Image;
 module ListItem = Elements_ListItem;
 module Overlay = Elements_Overlay;
+module PricingCard = Elements_PricingCard;
 module Text = Elements_Text;

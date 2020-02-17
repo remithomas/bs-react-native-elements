@@ -30,8 +30,8 @@ Then add `react-native-elements` to `bsconfig.json`
 - [ ] Image (50%)
 - [ ] Input
 - [ ] ListItem
-- [ ] Overlay
-- [ ] Pricing
+- [X] Overlay
+- [X] Pricing
 - [ ] Rating
 - [ ] SearchBar
 - [ ] Slider
