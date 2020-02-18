@@ -16,6 +16,10 @@ Then add `react-native-elements` to `bsconfig.json`
 "bs-dependencies": ["react-native-elements"]
 ```
 
+## Customizing
+
+- [ ] ThemeProvider (10%)
+
 ## Elements
 
 - [ ] Avatar (50%)
