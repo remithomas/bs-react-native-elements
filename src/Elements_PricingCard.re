@@ -28,7 +28,7 @@ external make:
     ~wrapperStyle: Style.t=?,
     ~price: string,
     ~onButtonPress: Event.pressEvent => unit=?,
-    ~button: buttonInfo=?,
+    ~button: buttonInfo,
     ~info: array(string)=?,
     ~color: Color.t=?,
     ~title: string,
