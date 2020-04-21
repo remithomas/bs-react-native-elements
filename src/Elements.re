@@ -7,5 +7,6 @@ module Image = Elements_Image;
 module ListItem = Elements_ListItem;
 module Overlay = Elements_Overlay;
 module PricingCard = Elements_PricingCard;
+module SearchBar = Elements_SearchBar;
 module Text = Elements_Text;
 module ThemeProvider = Elements_ThemeProvider;
