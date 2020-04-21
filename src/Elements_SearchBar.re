@@ -3,7 +3,7 @@ open ReactNative;
 [@react.component] [@bs.module "react-native-elements"]
 external make:
   (
-    ~platform: string=?,
+    ~platform: [@bs.string] [ | `default | `ios | `android]=?,
     // clearIcon
     // searchIcon
     // cancelIcon (platform="android" only)
@@ -29,7 +29,8 @@ external make:
     ~color: Color.t=?,
     ~disabled: bool=?,
     ~buttonDisabledStyle: Style.t=?,
-    ~buttonDisabledTextStyle: Style.t=?
+    ~buttonDisabledTextStyle: Style.t=?,
+    ~value: string=?
   ) =>
   React.element =
   "SearchBar";
