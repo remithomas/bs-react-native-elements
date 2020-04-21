@@ -1,5 +1,15 @@
 open ReactNative;
 
+[@bs.deriving abstract]
+type cancelButtonProps = {
+  [@bs.optional]
+  testID: string,
+};
+
+[@bs.obj]
+external makeCancelButtonProps: (~testID: string=?, unit) => cancelButtonProps =
+  "";
+
 [@react.component] [@bs.module "react-native-elements"]
 external make:
   (
@@ -30,7 +40,8 @@ external make:
     ~disabled: bool=?,
     ~buttonDisabledStyle: Style.t=?,
     ~buttonDisabledTextStyle: Style.t=?,
-    ~value: string=?
+    ~value: string=?,
+    ~cancelButtonProps: cancelButtonProps=?
   ) =>
   React.element =
   "SearchBar";
