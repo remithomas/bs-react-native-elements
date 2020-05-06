@@ -13,7 +13,7 @@ yarn add https://github.com/remithomas/bs-react-native-elements
 Then add `react-native-elements` to `bsconfig.json`
 
 ```json
-"bs-dependencies": ["react-native-elements"]
+"bs-dependencies": ["bs-react-native-elements"]
 ```
 
 ## Customizing
@@ -23,24 +23,24 @@ Then add `react-native-elements` to `bsconfig.json`
 ## Elements
 
 - [ ] Avatar (50%)
-- [X] Badge (missing value as React.element)
+- [x] Badge (missing value as React.element)
 - [ ] Button
 - [ ] ButtonGroup
 - [ ] Card
 - [ ] CheckBox
-- [X] Divider
+- [x] Divider
 - [ ] Header
-- [X] Icon
+- [x] Icon
 - [ ] Image (50%)
 - [ ] Input
-- [ ] ListItem
-- [X] Overlay
-- [X] Pricing
+- [x] ListItem
+- [x] Overlay
+- [x] Pricing
 - [ ] Rating
-- [X] SearchBar
+- [x] SearchBar
 - [ ] Slider
 - [ ] SocialIcon
-- [X] Text
+- [x] Text
 - [ ] Tile
 - [ ] Tooltip
 
