@@ -22,21 +22,21 @@ external fromImageProps:
     ~progressiveRenderingEnabled: bool=?,
     ~resizeMethod: [@bs.string] [ | `auto | `resize | `scale]=?,
     ~resizeMode: [@bs.string] [
-                  | `center
-                  | `contain
-                  | `cover
-                  | `repeat
-                  | `stretch
-                ]
-                  =?,
+                   | `center
+                   | `contain
+                   | `cover
+                   | `repeat
+                   | `stretch
+                 ]
+                   =?,
     ~source: Image.Source.t,
     ~style: Style.t=?,
     ~testID: string=?,
     unit
-  ) => imageProps = ""; 
+  ) =>
+  imageProps;
 
-[@react.component]
-[@bs.module "react-native-elements"]
+[@react.component] [@bs.module "react-native-elements"]
 external make:
   (
     ~containerStyle: Style.t=?,
@@ -44,7 +44,10 @@ external make:
     ~_PlaceholderContent: React.element=?,
     ~_ImageComponent: React.element=?,
     // TODO: Also receives all React Native Image props
+    ~source: Image.Source.t,
+    ~style: Style.t=?,
+    ~testID: string=?,
     unit
   ) =>
-  React.element = 
+  React.element =
   "Image";
