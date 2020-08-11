@@ -1,35 +1,31 @@
 {
-    "name": "bs-react-native-elements",
-    "reason": {
-        "react-jsx": 3
+  "name": "bs-react-native-elements",
+  "reason": {
+    "react-jsx": 3
+  },
+  "bs-dependencies": ["reason-react", "reason-react-native"],
+  "refmt": 3,
+  "bsc-flags": ["-bs-no-version-header", "-warn-error @a", "-w @a-105"],
+  "warnings": {
+    "number": "+102-105"
+  },
+  "suffix": ".bs.js",
+  "package-specs": [
+    {
+      "module": "es6",
+      "in-source": false
+    }
+  ],
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
     },
-    "bs-dependencies": [
-        "reason-react",
-        "reason-react-native"
-    ],
-    "refmt": 3,
-    "bsc-flags": [
-      "-bs-no-version-header",
-      "-warn-error @a",
-      "-w @a-105"
-    ],
-    "suffix": ".bs.js",
-    "package-specs": [
-      {
-        "module": "es6",
-        "in-source": false
-      }
-    ],
-    "sources": [
-      {
-          "dir": "src",
-          "subdirs": true
-      },
-      {
-        "dir": "examples",
-        "subdirs": true,
-        "type": "dev"
-      }
-    ],
-    "namespace": "react-native-elements"
+    {
+      "dir": "examples",
+      "subdirs": true,
+      "type": "dev"
+    }
+  ],
+  "namespace": "react-native-elements"
 }

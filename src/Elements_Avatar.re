@@ -1,27 +1,19 @@
 open ReactNative;
 
 [@bs.deriving abstract]
-type jsProps = {
-  .
-  "activeOpacity": Js.nullable(float),
-}
+type jsProps = {. "activeOpacity": Js.nullable(float)};
 
 type icon = {
   name: string,
   color: string,
   size: int,
   _type: string,
-  iconStyle: Style.t
+  iconStyle: Style.t,
 };
 
-[@bs.obj]
-external fromIcon: (
-  ~name: string,
-  unit
-) => icon = ""; 
+[@bs.obj] external fromIcon: (~name: string, unit) => icon;
 
-[@react.component]
-[@bs.module "react-native-elements"]
+[@react.component] [@bs.module "react-native-elements"]
 external make:
   (
     ~activeOpacity: float=?,
@@ -37,12 +29,7 @@ external make:
     ~overlayContainerStyle: Style.t=?,
     ~placeholderStyle: Style.t=?,
     ~rounded: bool=?,
-    ~size: [@bs.string] [
-                 | `small
-                 | `medium
-                 | `large
-                 | `xlarge
-        ]=?,
+    ~size: [@bs.string] [ | `small | `medium | `large | `xlarge]=?,
     ~showEditButton: bool=?,
     ~source: Image.Source.t=?,
     ~title: string=?,
@@ -52,5 +39,5 @@ external make:
     ~_ImageComponent: React.element=?,
     unit
   ) =>
-  React.element = 
+  React.element =
   "Avatar";

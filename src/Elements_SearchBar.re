@@ -7,8 +7,7 @@ type cancelButtonProps = {
 };
 
 [@bs.obj]
-external makeCancelButtonProps: (~testID: string=?, unit) => cancelButtonProps =
-  "";
+external makeCancelButtonProps: (~testID: string=?, unit) => cancelButtonProps;
 
 [@react.component] [@bs.module "react-native-elements"]
 external make:

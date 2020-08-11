@@ -16,6 +16,13 @@ Then add `react-native-elements` to `bsconfig.json`
 "bs-dependencies": ["bs-react-native-elements"]
 ```
 
+## Version
+
+We follow versions according `React Native Elements`.
+`bs-version 2.2.*` matches `React Native Elements version 2.2.*`.
+
+Our patch version is only elements we add or fixes we made on elements.
+
 ## Customizing
 
 - [ ] ThemeProvider (10%)

@@ -1,7 +1,6 @@
 open ReactNative;
 
-[@react.component]
-[@bs.module "react-native-elements"]
+[@react.component] [@bs.module "react-native-elements"]
 external make:
   (
     ~buttonStyle: Style.t=?,
@@ -21,16 +20,10 @@ external make:
     ~title: string=?,
     // titleProps
     ~titleStyle: Style.t=?,
-    ~type_: [@bs.string "type"] [
-                  | `solid
-                  | `clear
-                  | `outline
-                ]
-                  =?,
+    ~type_: [@bs.string "type"] [ | `solid | `clear | `outline]=?,
     ~_TouchableComponent: React.element=?,
     ~_ViewComponent: React.element=?,
-
     ~children: React.element=?
   ) =>
-  React.element = 
+  React.element =
   "Button";
