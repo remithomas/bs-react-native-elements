@@ -17,6 +17,7 @@ type jsProps = {
   "subtitleStyle": Js.nullable(Style.t),
   "rightTitle": jsUnsafe,
   "rightSubtitle": jsUnsafe,
+  "leftIcon": jsUnsafe,
   "leftAvatar": jsUnsafe,
   "rightAvatar": jsUnsafe,
   "leftElement": Js.nullable(React.element),
@@ -34,49 +35,51 @@ type jsProps = {
   /* pad: int=?, */
 };
 
-let makeProps = (
-  /* ~_Component: option(React.element)=?, */
-  ~containerStyle: option(Style.t)=?,
-  ~contentContainerStyle: option(Style.t)=?,
-  ~rightContentContainerStyle: option(Style.t)=?,
-  ~chevron: option(BoolOrNode.t)=?,
-  ~checkmark: option(BoolOrNode.t)=?,
-  ~onPress: option(unit => unit)=?,
-  ~onLongPress: option(unit => unit)=?,
-  ~title: option(StrOrNode.t)=?,
-  ~titleStyle: option(Style.t)=?,
-  /* ~titleProps, */
-  ~subtitle: option(StrOrNode.t)=?,
-  ~subtitleStyle: option(Style.t)=?,
-  /* ~subtitleProps, */
-  ~rightTitle: option(StrOrNode.t)=?,
-  /* ~rightTitleStyle: Style.t=?, */
-  /* ~rightTitleProps, */
-  ~rightSubtitle: option(StrOrNode.t)=?,
-  /* ~rightSubtitleStyle: Style.t=?, */
-  /* ~rightSubtitleProps, */
-  /* ~leftIcon, */
-  /* ~rightIcon, */
-  ~leftAvatar: option(PropsOrNode.t(Elements_Avatar.jsProps))=?,
-  ~rightAvatar: option(PropsOrNode.t(Elements_Avatar.jsProps))=?,
-  ~leftElement: option(React.element)=?,
-  ~rightElement: option(React.element)=?,
-  /* ~switch, */
-  /* ~input, */
-  /* ~buttonGroup, */
-  /* ~checkBox, */
-  /* ~badge, */
-  ~disabled: option(bool)=?,
-  ~disabledStyle: option(Style.t)=?,
-  ~topDivider: option(bool)=?,
-  ~bottomDivider: option(bool)=?,
-  /* ~_ViewComponent: React.element=?, */
-  /* ~pad: int=?, */
-  ()
-) => {
+let makeProps =
+    /* ~_Component: option(React.element)=?, */
+    (
+      ~containerStyle: option(Style.t)=?,
+      ~contentContainerStyle: option(Style.t)=?,
+      ~rightContentContainerStyle: option(Style.t)=?,
+      ~chevron: option(BoolOrNode.t)=?,
+      ~checkmark: option(BoolOrNode.t)=?,
+      ~onPress: option(unit => unit)=?,
+      ~onLongPress: option(unit => unit)=?,
+      ~title: option(StrOrNode.t)=?,
+      ~titleStyle: option(Style.t)=?,
+      /* ~titleProps, */
+      ~subtitle: option(StrOrNode.t)=?,
+      ~subtitleStyle: option(Style.t)=?,
+      /* ~subtitleProps, */
+      ~rightTitle: option(StrOrNode.t)=?,
+      /* ~rightTitleStyle: Style.t=?, */
+      /* ~rightTitleProps, */
+      ~rightSubtitle: option(StrOrNode.t)=?,
+      /* ~rightSubtitleStyle: Style.t=?, */
+      /* ~rightSubtitleProps, */
+      ~leftIcon: option(PropsOrNode.t(Elements_Icon.jsProps))=?,
+      /* ~rightIcon, */
+      ~leftAvatar: option(PropsOrNode.t(Elements_Avatar.jsProps))=?,
+      ~rightAvatar: option(PropsOrNode.t(Elements_Avatar.jsProps))=?,
+      ~leftElement: option(React.element)=?,
+      ~rightElement: option(React.element)=?,
+      /* ~switch, */
+      /* ~input, */
+      /* ~buttonGroup, */
+      /* ~checkBox, */
+      /* ~badge, */
+      ~disabled: option(bool)=?,
+      ~disabledStyle: option(Style.t)=?,
+      ~topDivider: option(bool)=?,
+      ~bottomDivider: option(bool)=?,
+      /* ~_ViewComponent: React.element=?, */
+      /* ~pad: int=?, */
+      (),
+    ) => {
   "containerStyle": Js.Nullable.fromOption(containerStyle),
   "contentContainerStyle": Js.Nullable.fromOption(contentContainerStyle),
-  "rightContentContainerStyle": Js.Nullable.fromOption(rightContentContainerStyle),
+  "rightContentContainerStyle":
+    Js.Nullable.fromOption(rightContentContainerStyle),
   "chevron": chevron |> BoolOrNode.encodeValue,
   "checkmark": checkmark |> BoolOrNode.encodeValue,
   "onPress": Js.Nullable.fromOption(onPress),
@@ -87,6 +90,7 @@ let makeProps = (
   "subtitleStyle": Js.Nullable.fromOption(subtitleStyle),
   "rightTitle": rightTitle |> StrOrNode.encodeValue,
   "rightSubtitle": rightSubtitle |> StrOrNode.encodeValue,
+  "leftIcon": leftIcon |> PropsOrNode.encodeValue,
   "leftAvatar": leftAvatar |> PropsOrNode.encodeValue,
   "rightAvatar": rightAvatar |> PropsOrNode.encodeValue,
   "leftElement": Js.Nullable.fromOption(leftElement),
