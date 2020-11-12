@@ -15,6 +15,7 @@ external make:
     ~containerStyle: Style.t=?,
     ~onPress: unit => unit=?,
     ~status: [ | `primary | `success | `warning | `error]=?,
+    // textProps
     ~textStyle: Style.t=?,
     ~value: BadgeValue.t=?,
     ~_Component: React.element=?,

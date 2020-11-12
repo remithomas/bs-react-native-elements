@@ -32,10 +32,13 @@ external fromImageProps:
 [@react.component] [@bs.module "react-native-elements"]
 external make:
   (
+    ~onLongPress: Event.pressEvent => unit=?,
+    ~onPress: Event.pressEvent => unit=?,
     ~containerStyle: Style.t=?,
     ~placeholderStyle: Style.t=?,
-    ~_PlaceholderContent: React.element=?,
+    ~transition: bool=?,
     ~_ImageComponent: React.element=?,
+    ~_PlaceholderContent: React.element=?,
     // React Native Image props
     ~accessibilityLabel: string=?,
     ~accessible: bool=?,

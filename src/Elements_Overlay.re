@@ -15,17 +15,13 @@ module OrientationChangeEvent = {
 [@react.component] [@bs.module "react-native-elements"]
 external make:
   (
-    ~borderRadius: int=?,
+    ~backdropStyle: Style.t=?,
     ~children: React.element=?,
-    ~containerStyle: Style.t=?,
     ~fullScreen: bool=?,
-    ~height: case=?,
     ~isVisible: bool=?,
-    ~overlayBackgroundColor: Color.t=?,
     ~onBackdropPress: Event.pressEvent => unit=?,
     ~overlayStyle: Style.t=?,
-    ~width: case=?,
-    ~windowBackgroundColor: Color.t=?,
+    ~_ModalComponent: React.element=?,
     // ============== modal props
     ~ref: ReactNative.NativeElement.ref=?,
     ~animationType: [ | `none | `slide | `fade]=?,

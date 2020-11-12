@@ -22,8 +22,8 @@ external make:
     ~titleStyle: Style.t=?,
     ~type_: [ | `solid | `clear | `outline]=?,
     ~_TouchableComponent: React.element=?,
-    ~_ViewComponent: React.element=?,
-    ~children: React.element=?
+    ~_ViewComponent: React.element=?
   ) =>
+  // ~children: React.element=?
   React.element =
   "Button";
