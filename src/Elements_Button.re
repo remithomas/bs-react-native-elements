@@ -20,10 +20,10 @@ external make:
     ~title: string=?,
     // titleProps
     ~titleStyle: Style.t=?,
-    ~type_: [@bs.string "type"] [ | `solid | `clear | `outline]=?,
+    ~type_: [ | `solid | `clear | `outline]=?,
     ~_TouchableComponent: React.element=?,
-    ~_ViewComponent: React.element=?,
-    ~children: React.element=?
+    ~_ViewComponent: React.element=?
   ) =>
+  // ~children: React.element=?
   React.element =
   "Button";

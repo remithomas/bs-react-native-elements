@@ -12,7 +12,8 @@ type theme = {
   // Image: Partial<ImageProps>;
   // Input: Partial<InputProps>;
   // ListItem: Partial<ListItemProps>;
-  [@bs.optional] [@bs.as "ListItem"] listItem: Elements_ListItem.jsProps,
+  [@bs.optional] [@bs.as "ListItem"]
+  listItem: Elements_ListItem.jsProps,
   // Overlay: Partial<OverlayProps>;
   // PricingCard: Partial<PricingCardProps>;
   // Rating: Partial<RatingProps>;
@@ -27,18 +28,9 @@ type theme = {
 };
 
 [@bs.obj]
-external makeTheme: (
-  ~listItem: Elements_ListItem.jsProps=?,
-  unit
-) => theme = "";
+external makeTheme: (~listItem: Elements_ListItem.jsProps=?, unit) => theme;
 
-[@react.component]
-[@bs.module "react-native-elements"]
+[@react.component] [@bs.module "react-native-elements"]
 external make:
-  (
-    ~theme: theme=?,
-    ~children: React.element=?,
-    unit
-  ) =>
-  React.element = 
+  (~theme: theme=?, ~children: React.element=?, unit) => React.element =
   "ThemeProvider";

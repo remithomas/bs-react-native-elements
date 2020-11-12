@@ -14,7 +14,8 @@ external make:
     ~badgeStyle: Style.t=?,
     ~containerStyle: Style.t=?,
     ~onPress: unit => unit=?,
-    ~status: [@bs.string] [ | `primary | `success | `warning | `error]=?,
+    ~status: [ | `primary | `success | `warning | `error]=?,
+    // textProps
     ~textStyle: Style.t=?,
     ~value: BadgeValue.t=?,
     ~_Component: React.element=?,

@@ -19,7 +19,7 @@ Then add `react-native-elements` to `bsconfig.json`
 ## Version
 
 We follow versions according `React Native Elements`.
-`bs-version 2.2.*` matches `React Native Elements version 2.2.*`.
+`bs-version 2.3.*` matches `React Native Elements version 2.3.*`.
 
 Our patch version is only elements we add or fixes we made on elements.
 

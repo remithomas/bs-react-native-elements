@@ -5,7 +5,7 @@ type case =
   | String(string);
 
 module OrientationChangeEvent = {
-  type payload = {orientation: Modal.OrientationChange.t};
+  type payload = {orientation: Modal.orientationChange};
 
   include Event.SyntheticEvent({
     type _payload = payload;
@@ -15,26 +15,22 @@ module OrientationChangeEvent = {
 [@react.component] [@bs.module "react-native-elements"]
 external make:
   (
-    ~borderRadius: int=?,
+    ~backdropStyle: Style.t=?,
     ~children: React.element=?,
-    ~containerStyle: Style.t=?,
     ~fullScreen: bool=?,
-    ~height: case=?,
     ~isVisible: bool=?,
-    ~overlayBackgroundColor: Color.t=?,
     ~onBackdropPress: Event.pressEvent => unit=?,
     ~overlayStyle: Style.t=?,
-    ~width: case=?,
-    ~windowBackgroundColor: Color.t=?,
+    ~_ModalComponent: React.element=?,
     // ============== modal props
     ~ref: ReactNative.NativeElement.ref=?,
-    ~animationType: [@bs.string] [ | `none | `slide | `fade]=?,
+    ~animationType: [ | `none | `slide | `fade]=?,
     ~hardwareAccelerated: bool=?,
     ~onDismiss: unit => unit=?,
     ~onOrientationChange: OrientationChangeEvent.t => unit=?,
     ~onRequestClose: unit => unit=?,
     ~onShow: unit => unit=?,
-    ~presentationStyle: [@bs.string] [
+    ~presentationStyle: [
                           | `fullScreen
                           | `pageSheet
                           | `formSheet

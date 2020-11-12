@@ -12,7 +12,7 @@ external makeCancelButtonProps: (~testID: string=?, unit) => cancelButtonProps;
 [@react.component] [@bs.module "react-native-elements"]
 external make:
   (
-    ~platform: [@bs.string] [ | `default | `ios | `android]=?,
+    ~platform: [ | `default | `ios | `android]=?,
     // clearIcon
     // searchIcon
     // cancelIcon (platform="android" only)

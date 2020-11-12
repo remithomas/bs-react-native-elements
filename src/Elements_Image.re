@@ -20,15 +20,8 @@ external fromImageProps:
     ~onPartialLoad: unit => unit=?,
     ~onProgress: Image.progressEvent => unit=?,
     ~progressiveRenderingEnabled: bool=?,
-    ~resizeMethod: [@bs.string] [ | `auto | `resize | `scale]=?,
-    ~resizeMode: [@bs.string] [
-                   | `center
-                   | `contain
-                   | `cover
-                   | `repeat
-                   | `stretch
-                 ]
-                   =?,
+    ~resizeMethod: [ | `auto | `resize | `scale]=?,
+    ~resizeMode: [ | `center | `contain | `cover | `repeat | `stretch]=?,
     ~source: Image.Source.t,
     ~style: Style.t=?,
     ~testID: string=?,
@@ -39,10 +32,13 @@ external fromImageProps:
 [@react.component] [@bs.module "react-native-elements"]
 external make:
   (
+    ~onLongPress: Event.pressEvent => unit=?,
+    ~onPress: Event.pressEvent => unit=?,
     ~containerStyle: Style.t=?,
     ~placeholderStyle: Style.t=?,
-    ~_PlaceholderContent: React.element=?,
+    ~transition: bool=?,
     ~_ImageComponent: React.element=?,
+    ~_PlaceholderContent: React.element=?,
     // React Native Image props
     ~accessibilityLabel: string=?,
     ~accessible: bool=?,
@@ -59,15 +55,8 @@ external make:
     ~onPartialLoad: unit => unit=?,
     ~onProgress: Image.progressEvent => unit=?,
     ~progressiveRenderingEnabled: bool=?,
-    ~resizeMethod: [@bs.string] [ | `auto | `resize | `scale]=?,
-    ~resizeMode: [@bs.string] [
-                   | `center
-                   | `contain
-                   | `cover
-                   | `repeat
-                   | `stretch
-                 ]
-                   =?,
+    ~resizeMethod: [ | `auto | `resize | `scale]=?,
+    ~resizeMode: [ | `center | `contain | `cover | `repeat | `stretch]=?,
     ~source: Image.Source.t,
     ~style: Style.t=?,
     ~testID: string=?,
