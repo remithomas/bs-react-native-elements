@@ -32,9 +32,9 @@ Our patch version is only elements we add or fixes we made on elements.
 - [ ] Avatar (50%)
 - [x] Badge (missing value as React.element)
 - [ ] Button
-- [ ] ButtonGroup
+- [x] ButtonGroup
 - [ ] Card
-- [ ] CheckBox
+- [x] CheckBox
 - [x] Divider
 - [ ] Header
 - [x] Icon
