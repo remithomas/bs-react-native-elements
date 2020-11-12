@@ -29,7 +29,7 @@ external make:
     ~overlayContainerStyle: Style.t=?,
     ~placeholderStyle: Style.t=?,
     ~rounded: bool=?,
-    ~size: [@bs.string] [ | `small | `medium | `large | `xlarge]=?,
+    ~size: [ | `small | `medium | `large | `xlarge]=?,
     ~showEditButton: bool=?,
     ~source: Image.Source.t=?,
     ~title: string=?,

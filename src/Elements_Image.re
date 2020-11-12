@@ -20,15 +20,8 @@ external fromImageProps:
     ~onPartialLoad: unit => unit=?,
     ~onProgress: Image.progressEvent => unit=?,
     ~progressiveRenderingEnabled: bool=?,
-    ~resizeMethod: [@bs.string] [ | `auto | `resize | `scale]=?,
-    ~resizeMode: [@bs.string] [
-                   | `center
-                   | `contain
-                   | `cover
-                   | `repeat
-                   | `stretch
-                 ]
-                   =?,
+    ~resizeMethod: [ | `auto | `resize | `scale]=?,
+    ~resizeMode: [ | `center | `contain | `cover | `repeat | `stretch]=?,
     ~source: Image.Source.t,
     ~style: Style.t=?,
     ~testID: string=?,
@@ -59,15 +52,8 @@ external make:
     ~onPartialLoad: unit => unit=?,
     ~onProgress: Image.progressEvent => unit=?,
     ~progressiveRenderingEnabled: bool=?,
-    ~resizeMethod: [@bs.string] [ | `auto | `resize | `scale]=?,
-    ~resizeMode: [@bs.string] [
-                   | `center
-                   | `contain
-                   | `cover
-                   | `repeat
-                   | `stretch
-                 ]
-                   =?,
+    ~resizeMethod: [ | `auto | `resize | `scale]=?,
+    ~resizeMode: [ | `center | `contain | `cover | `repeat | `stretch]=?,
     ~source: Image.Source.t,
     ~style: Style.t=?,
     ~testID: string=?,
