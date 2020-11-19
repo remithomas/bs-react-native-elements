@@ -46,7 +46,7 @@ Our patch version is only elements we add or fixes we made on elements.
 - [ ] Rating
 - [x] SearchBar
 - [ ] Slider
-- [ ] SocialIcon
+- [x] SocialIcon
 - [x] Text
 - [ ] Tile
 - [ ] Tooltip

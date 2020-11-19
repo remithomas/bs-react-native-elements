@@ -129,17 +129,68 @@ module Content = {
 
 module Input = {
   [@react.component] [@bs.scope "Input"] [@bs.module "react-native-elements"]
-  external make: (~children: React.element=?) => React.element = "Input";
+  external make:
+    (
+      ~containerStyle: Style.t=?,
+      ~disabled: bool=?,
+      ~disabledInputStyle: Style.t=?,
+      ~inputContainerStyle: Style.t=?,
+      ~errorMessage: string=?,
+      ~errorStyle: Style.t=?,
+      // errorProps
+      // inputStyle: Style.t=?,
+      // label
+      // labelStyle: Style.t=?,
+      // labelProps
+      // leftIcon
+      // leftIconContainerStyle: Style.t=?,
+      ~placeholder: string=?,
+      // rightIcon
+      ~rightIconContainerStyle: Style.t=?,
+      ~renderErrorMessage: bool=?,
+      ~_InputComponent: React.element=?,
+      unit
+    ) =>
+    React.element =
+    "Input";
 };
 
 module Subtitle = {
   [@react.component]
   [@bs.scope "Subtitle"]
   [@bs.module "react-native-elements"]
-  external make: (~children: React.element=?) => React.element = "Subtitle";
+  external make:
+    (
+      ~h1: bool=?,
+      ~h1Style: Style.t=?,
+      ~h2: bool=?,
+      ~h2Style: Style.t=?,
+      ~h3: bool=?,
+      ~h3Style: Style.t=?,
+      ~h4: bool=?,
+      ~h4Style: Style.t=?,
+      ~style: Style.t=?,
+      ~children: React.element=?
+    ) =>
+    React.element =
+    "Subtitle";
 };
 
 module Title = {
   [@react.component] [@bs.scope "Title"] [@bs.module "react-native-elements"]
-  external make: (~children: React.element=?) => React.element = "Title";
+  external make:
+    (
+      ~h1: bool=?,
+      ~h1Style: Style.t=?,
+      ~h2: bool=?,
+      ~h2Style: Style.t=?,
+      ~h3: bool=?,
+      ~h3Style: Style.t=?,
+      ~h4: bool=?,
+      ~h4Style: Style.t=?,
+      ~style: Style.t=?,
+      ~children: React.element=?
+    ) =>
+    React.element =
+    "Title";
 };
