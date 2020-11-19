@@ -20,7 +20,6 @@ external make:
     ~solid: bool=?,
     ~_type: [@bs.string "type"] [
               | `material
-              | [@bs.as "material"] `material
               | [@bs.as "material-community"] `materialCommunity
               | [@bs.as "font-awesome"] `fontAwesome
               | [@bs.as "font-awesome-5"] `fontAwesome5

@@ -78,7 +78,48 @@ module CheckBox = {
 
 module Chevron = {
   [@react.component] [@bs.scope "Chevron"] [@bs.module "react-native-elements"]
-  external make: (~children: React.element=?) => React.element = "Chevron";
+  // from Elements_Icon
+  external make:
+    (
+      ~brand: bool=?,
+      ~color: Color.t=?,
+      ~containerStyle: Style.t=?,
+      ~disabled: bool=?,
+      ~disabledStyle: Style.t=?,
+      ~iconStyle: Style.t=?,
+      // iconProps
+      ~name: string=?,
+      ~onPress: Event.pressEvent => unit=?,
+      ~onLongPress: Event.pressEvent => unit=?,
+      ~raised: bool=?,
+      ~reverse: bool=?,
+      ~reverseColor: Color.t=?,
+      ~size: int=?,
+      ~solid: bool=?,
+      ~_type: [@bs.string "type"] [
+                | `material
+                | [@bs.as "material"] `material
+                | [@bs.as "material-community"] `materialCommunity
+                | [@bs.as "font-awesome"] `fontAwesome
+                | [@bs.as "font-awesome-5"] `fontAwesome5
+                | [@bs.as "octicon"] `octicon
+                | [@bs.as "ionicon"] `ionicon
+                | [@bs.as "foundation"] `foundation
+                | [@bs.as "evilicon"] `evilicon
+                | [@bs.as "simple-line-icon"] `simpleLineIcon
+                | [@bs.as "zocial"] `zocial
+                | [@bs.as "entypo"] `entypo
+                | [@bs.as "feather"] `feather
+                | [@bs.as "antdesign"] `antdesign
+                | [@bs.as "fontisto"] `fontisto
+              ]
+                =?,
+      ~underlayColor: Color.t=?,
+      ~_Component: React.element=?,
+      unit
+    ) =>
+    React.element =
+    "Chevron";
 };
 
 module Content = {
@@ -88,17 +129,68 @@ module Content = {
 
 module Input = {
   [@react.component] [@bs.scope "Input"] [@bs.module "react-native-elements"]
-  external make: (~children: React.element=?) => React.element = "Input";
+  external make:
+    (
+      ~containerStyle: Style.t=?,
+      ~disabled: bool=?,
+      ~disabledInputStyle: Style.t=?,
+      ~inputContainerStyle: Style.t=?,
+      ~errorMessage: string=?,
+      ~errorStyle: Style.t=?,
+      // errorProps
+      // inputStyle: Style.t=?,
+      // label
+      // labelStyle: Style.t=?,
+      // labelProps
+      // leftIcon
+      // leftIconContainerStyle: Style.t=?,
+      ~placeholder: string=?,
+      // rightIcon
+      ~rightIconContainerStyle: Style.t=?,
+      ~renderErrorMessage: bool=?,
+      ~_InputComponent: React.element=?,
+      unit
+    ) =>
+    React.element =
+    "Input";
 };
 
 module Subtitle = {
   [@react.component]
   [@bs.scope "Subtitle"]
   [@bs.module "react-native-elements"]
-  external make: (~children: React.element=?) => React.element = "Subtitle";
+  external make:
+    (
+      ~h1: bool=?,
+      ~h1Style: Style.t=?,
+      ~h2: bool=?,
+      ~h2Style: Style.t=?,
+      ~h3: bool=?,
+      ~h3Style: Style.t=?,
+      ~h4: bool=?,
+      ~h4Style: Style.t=?,
+      ~style: Style.t=?,
+      ~children: React.element=?
+    ) =>
+    React.element =
+    "Subtitle";
 };
 
 module Title = {
   [@react.component] [@bs.scope "Title"] [@bs.module "react-native-elements"]
-  external make: (~children: React.element=?) => React.element = "Title";
+  external make:
+    (
+      ~h1: bool=?,
+      ~h1Style: Style.t=?,
+      ~h2: bool=?,
+      ~h2Style: Style.t=?,
+      ~h3: bool=?,
+      ~h3Style: Style.t=?,
+      ~h4: bool=?,
+      ~h4Style: Style.t=?,
+      ~style: Style.t=?,
+      ~children: React.element=?
+    ) =>
+    React.element =
+    "Title";
 };
