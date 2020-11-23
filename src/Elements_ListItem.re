@@ -64,20 +64,22 @@ external make:
 
 module ButtonGroup = {
   [@react.component]
-  [@bs.scope "ButtonGroup"]
+  [@bs.scope "ListItem"]
   [@bs.module "react-native-elements"]
   external make: (~children: React.element=?) => React.element = "ButtonGroup";
 };
 
 module CheckBox = {
   [@react.component]
-  [@bs.scope "Checkbox"]
+  [@bs.scope "ListItem"]
   [@bs.module "react-native-elements"]
   external make: (~children: React.element=?) => React.element = "Checkbox";
 };
 
 module Chevron = {
-  [@react.component] [@bs.scope "Chevron"] [@bs.module "react-native-elements"]
+  [@react.component]
+  [@bs.scope "ListItem"]
+  [@bs.module "react-native-elements"]
   // from Elements_Icon
   external make:
     (
@@ -123,12 +125,16 @@ module Chevron = {
 };
 
 module Content = {
-  [@react.component] [@bs.scope "Content"] [@bs.module "react-native-elements"]
+  [@react.component]
+  [@bs.scope "ListItem"]
+  [@bs.module "react-native-elements"]
   external make: (~children: React.element=?) => React.element = "Content";
 };
 
 module Input = {
-  [@react.component] [@bs.scope "Input"] [@bs.module "react-native-elements"]
+  [@react.component]
+  [@bs.scope "ListItem"]
+  [@bs.module "react-native-elements"]
   external make:
     (
       ~containerStyle: Style.t=?,
@@ -157,7 +163,7 @@ module Input = {
 
 module Subtitle = {
   [@react.component]
-  [@bs.scope "Subtitle"]
+  [@bs.scope "ListItem"]
   [@bs.module "react-native-elements"]
   external make:
     (
@@ -177,7 +183,9 @@ module Subtitle = {
 };
 
 module Title = {
-  [@react.component] [@bs.scope "Title"] [@bs.module "react-native-elements"]
+  [@react.component]
+  [@bs.scope "ListItem"]
+  [@bs.module "react-native-elements"]
   external make:
     (
       ~h1: bool=?,

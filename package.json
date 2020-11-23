@@ -1,6 +1,6 @@
 {
   "name": "bs-react-native-elements",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "description": "React Native Elements bindings for ReasonML",
   "keywords": [
     "react-native",
@@ -19,18 +19,18 @@
     "react-native": "^0.63.3",
     "react-native-elements": "^2.3.2",
     "reason-react": "^0.9.1",
-    "reason-react-native": "^0.63.0"
+    "reason-react-native": "^0.63.2"
   },
   "dependencies": {
     "refmt": "^1.13.7-1"
   },
   "devDependencies": {
-    "bs-platform": "^8.3.2",
+    "bs-platform": "^8.3.3",
     "lint-staged": "^10.5.1",
     "pre-commit": "^1.2.2",
-    "prettier": "^2.1.2",
+    "prettier": "^2.2.0",
     "reason-react": "^0.9.1",
-    "reason-react-native": "^0.63.0"
+    "reason-react-native": "^0.63.2"
   },
   "lint-staged": {
     "*.re": [
