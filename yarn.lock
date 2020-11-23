@@ -85,10 +85,10 @@ braces@^3.0.1:
   dependencies:
     fill-range "^7.0.1"
 
-bs-platform@^8.3.2:
-  version "8.3.2"
-  resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-8.3.2.tgz#c307f1cc2d2397c3d088c7f3b62e9f493283cdcf"
-  integrity sha512-iOTi5JIlNPoCPq31NS9ET79FLyCpwTL2JZbgHz35LzY9Bch1iDtbBR3FVGhRbjphxelAP4fLlFONfUNp5Y3a5g==
+bs-platform@^8.3.3:
+  version "8.3.3"
+  resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-8.3.3.tgz#68e3796ad0607c55da0f45fe14c0ce0aaf69682c"
+  integrity sha512-ayS5wdvrOX6PxU2wX7O2rLllzsQDzmGq582NNDFwfM6b9HQu7ki242Pc46o2/CnGHHumKVarpX0IZzjC2Llgcg==
 
 buffer-from@^1.0.0:
   version "1.1.1"
@@ -551,10 +551,10 @@ pre-commit@^1.2.2:
     spawn-sync "^1.0.15"
     which "1.2.x"
 
-prettier@^2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.1.2.tgz#3050700dae2e4c8b67c4c3f666cdb8af405e1ce5"
-  integrity sha512-16c7K+x4qVlJg9rEbXl7HEGmQyZlG4R9AgP+oHKRMsMsuk8s+ATStlf1NpDqyBI1HpVyfjLOeMhH2LvuNvV5Vg==
+prettier@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.2.0.tgz#8a03c7777883b29b37fb2c4348c66a78e980418b"
+  integrity sha512-yYerpkvseM4iKD/BXLYUkQV5aKt4tQPqaGW6EsZjzyu0r7sVZZNPJW4Y8MyKmicp6t42XUPcBVA+H6sB3gqndw==
 
 process-nextick-args@~2.0.0:
   version "2.0.1"
@@ -587,10 +587,10 @@ readable-stream@^2.2.2:
     string_decoder "~1.1.1"
     util-deprecate "~1.0.1"
 
-reason-react-native@^0.63.0:
-  version "0.63.0"
-  resolved "https://registry.yarnpkg.com/reason-react-native/-/reason-react-native-0.63.0.tgz#08de85136a41809b9a66cac066d4ea6975406000"
-  integrity sha512-rE1OOph5Jxceost2ahdvX+VXJ2RPNyefX9FMXa/OXgqmLKjFeZuyVOySUj41UoohOYyKmZWbgansDGccwYrdUQ==
+reason-react-native@^0.63.2:
+  version "0.63.2"
+  resolved "https://registry.yarnpkg.com/reason-react-native/-/reason-react-native-0.63.2.tgz#01750295995f3e896a56e713990cb594d56eb22d"
+  integrity sha512-PXQa2CDY/QZbfvCjn3q3qVoFfzKcUg3Prdw3mEyXL4BoGnRfVMXA4jVCoyXPUQCXU05MErM2TE3eTZLjRhQ+7g==
 
 reason-react@^0.9.1:
   version "0.9.1"
